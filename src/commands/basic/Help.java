@@ -71,7 +71,7 @@ public class Help implements Command{
 		}
 
 		//send help message
-		event.getChannel().sendMessage(helpMessage.build()).complete();
+		event.getChannel().sendMessage(helpMessage.setColor(Color.RED).build()).complete();
 	}
 
 	/**

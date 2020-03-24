@@ -20,6 +20,7 @@ public class MessageEvent extends Thread {
 	public static List<Command> commands(){
 		//create a list of all commands
 		List<Command> commands = new ArrayList<Command>();
+		
 		commands.add(new Ping());
 		commands.add(new Help());
 		//ADD NEW COMMANDS HERE <-----------------------------------------------------------------------------------

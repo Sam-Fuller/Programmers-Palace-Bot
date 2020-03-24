@@ -21,7 +21,9 @@ public interface CommandCollection extends Command{
 	 */
 	@Override
 	public default Optional<Command> valid(MessageReceivedEvent event, String[] args) {
-		//if (args.length == 0) return Optional.of(this);
+		if (!this.aliases().contains(args[0].toLowerCase())) return Optional.empty();
+		
+		if (args.length == 0) return Optional.of(this);
 		
 		String[] subargs = Arrays.copyOfRange(args, 1, args.length);
 		
